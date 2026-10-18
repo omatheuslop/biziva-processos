@@ -1,5 +1,6 @@
 <script lang="ts">
   import Actions from '$/components/Actions.svelte';
+  import BizivaAssistant from '$lib/biziva/BizivaAssistant.svelte';
   import Card from '$/components/Card/Card.svelte';
   import DiagramDocButton from '$/components/DiagramDocumentationButton.svelte';
   import Editor from '$/components/Editor.svelte';
@@ -78,6 +79,8 @@
     }
   });
 </script>
+
+<BizivaAssistant />
 
 <div class="flex h-full flex-col overflow-hidden">
   {#snippet mobileToggle()}
