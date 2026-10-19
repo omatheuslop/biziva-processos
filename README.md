@@ -1,121 +1,27 @@
-[![Join our Discord!](https://img.shields.io/static/v1?message=join%20chat&color=9cf&logo=discord&label=discord)](https://discord.gg/sKeNQX4Wtj)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/27fa023d-7c73-4a3f-9791-b3b657a47100/deploy-status)](https://app.netlify.com/sites/mermaidjs/deploys)
+![Biziva Processos — Do plano ao fluxo.](BIZIVA-hero.svg)
 
-# Mermaid Live Editor
+# Biziva Processos
 
-Edit, preview and share mermaid charts/diagrams.
+**Do plano ao fluxo.** Transforme processos em diagramas Mermaid com responsáveis e prazos.
 
-## Features
+[**Experimentar no navegador →**](https://biziva-processos.matheuslopesmgo.chatgpt.site) · [Integração Biziva](BIZIVA.md) · [Documentação original](README.upstream.md)
 
-- Edit and preview flowcharts, sequence diagrams, gantt diagrams in real time.
-- Save the result as a svg
-- Get a link to a viewer of the diagram so that you can share it with others.
-- Get a link to edit the diagram so that someone else can tweak it and send a new link back
+## Comece em minutos
 
-## Live demo
+1. Abra o aplicativo e entre com sua conta quando solicitado.
+2. Crie ou abra um projeto e experimente as ferramentas do editor.
+3. Revise e exporte seu trabalho pelas opções disponíveis no aplicativo.
 
-You can try out a [live version](https://mermaid.live/).
+Projetos ficam no navegador. Faça cópias e exporte o que deseja guardar. Recursos de IA exigem configuração e chave/carteira própria; o acesso ao editor não inclui créditos de IA. Recursos opcionais do projeto original podem exigir configuração adicional.
 
-# Contributors are welcome!
+## English
 
-If you want to speed up the progress for mermaid-live-editor, join the Discord channel and contact knsv.
+**From plan to flow.** Turn processes into Mermaid diagrams with owners and deadlines.
 
-## Docker
+[Open the active application](https://biziva-processos.matheuslopesmgo.chatgpt.site). Sign in when prompted, create a project and review your export. Projects are browser-local; keep backups. AI features require your own configured key and balance. Optional upstream integrations may require additional setup.
 
-### Run published image
+## Origem, créditos e licença / Upstream and license
 
-```bash
-docker run --platform linux/amd64 --publish 8000:8080 ghcr.io/mermaid-js/mermaid-live-editor
-```
+Este projeto é uma adaptação de [mermaid-js/mermaid-live-editor](https://github.com/mermaid-js/mermaid-live-editor). O histórico, os créditos e os arquivos de licença originais foram preservados. A apresentação Biziva não altera a autoria do projeto original nem seus termos de licença.
 
-The published docker image is built using our default environment variables. You cannot override them when running the image. If you need to customize them, you will need to build the image yourself.
-
-### To configure renderer URL
-
-When building set the MERMAID_RENDERER_URL build argument to the rendering
-service.
-Example:
-Default is`https://mermaid.ink`.
-Set to empty string to disable PNG and SVG links under Actions
-
-### To configure Kroki Instance URL
-
-When building set the MERMAID_KROKI_RENDERER_URL build argument to your Kroki
-instance.
-Default is `https://kroki.io`
-Set to empty string to disable Kroki link under Actions
-
-### To configure Analytics
-
-When building set the MERMAID_ANALYTICS_URL build argument to your plausible instance, and MERMAID_DOMAIN to your domain.
-
-Default is empty, disabling analytics.
-
-### To enable Mermaid Chart links and promotion
-
-When building set the MERMAID_IS_ENABLED_MERMAID_CHART_LINKS build argument to `true`
-
-Default is empty, disabling button to save to Mermaid Chart and promotional banner.
-
-### To update the Security modal
-
-The modal shown on clicking the security link assumes analytics, renderer, Kroki
-and Mermaid chart are enabled. You can update it by modifying `Privacy.svelte`
-if you wish.
-
-### Development
-
-```bash
-docker compose up --build
-```
-
-Then open http://localhost:3000
-
-### Building and running images locally
-
-#### Build
-
-```bash
-docker build -t mermaid-js/mermaid-live-editor .
-```
-
-#### Run
-
-```bash
-docker run --detach --name mermaid-live-editor --publish 8080:8080 mermaid-js/mermaid-live-editor
-```
-
-Visit: <http://localhost:8080>
-
-#### Stop
-
-```bash
-docker stop mermaid-live-editor
-```
-
-## Setup
-
-Below link will help you making a copy of the repository in your local system.
-
-https://docs.github.com/en/get-started/quickstart/fork-a-repo
-
-## Requirements
-
-- [Node.js](https://nodejs.org/en/) current LTS version
-- [pnpm](https://pnpm.io/) package manager. Install with `corepack enable pnpm`
-
-## Development
-
-```sh
-pnpm install
-pnpm dev -- --open
-```
-
-This app is created with Svelte Kit.
-
-## Release
-
-When a PR is created targeting master, it will be built and deployed by Netlify.
-The URL will be indicated in a Comment in the PR.
-
-Once the PR is merged, it will automatically be released.
+Read the complete [original README](README.upstream.md) for upstream setup, contributors, acknowledgments and license information. Biziva adaptations are documented in [BIZIVA.md](BIZIVA.md).
